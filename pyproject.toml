@@ -13,9 +13,16 @@ python = "^3.10"
 prompt = "^0.4.1"
 
 
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+
+[tool.flake8]
+extends = "flake8"
+
