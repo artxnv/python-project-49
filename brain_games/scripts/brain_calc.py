@@ -8,23 +8,29 @@ OPERATORS = {
     '*': operator.mul
 }
 
+
 def generate_question():
-    """Генерирует вопрос и правильный ответ."""
+    """Generate a question and its correct answer."""
     num1 = random.randint(1, 25)
     num2 = random.randint(1, 25)
-    operator = random.choice(list(OPERATORS.keys()))
-    question = f"{num1} {operator} {num2}"
-    correct_answer = str(OPERATORS[operator](num1, num2))
+    op = random.choice(list(OPERATORS.keys()))
+    question = (
+        f"What is the result of the expression? "
+        f"{num1} {op} {num2}"
+    )
+    correct_answer = str(OPERATORS[op](num1, num2))
     return question, correct_answer
 
+
 def welcome_user():
-    """Приветствует пользователя и запрашивает его имя."""
+    """Welcome the user and ask for their name."""
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print("What is the result of the expression?")
 
+
 def play_game():
-    """Основная логика игры."""
+    """Main game logic."""
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -38,13 +44,15 @@ def play_game():
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print("Let's try again!")
             return
-    print(f"Congratulations, {name}!")
+    print("Congratulations!")
+
 
 def main():
-    """Основная функция игры."""
+    """Main function of the game."""
     print("Welcome to the Brain Games!")
     welcome_user()
     play_game()
+
 
 if __name__ == "__main__":
     main()
