@@ -9,7 +9,10 @@ def is_even(number):
 def welcome_user():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
-    print("Answer 'yes' if the number is even, otherwise answer 'no'.")
+    print(
+        "Answer 'yes' if the number is even, "
+        "otherwise answer 'no'."
+    )
     return name
 
 
@@ -25,7 +28,10 @@ def play_game(name):
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'."
+            )
             print("Let's try again!")
             return
     print(f"Congratulations, {name}!")

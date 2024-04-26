@@ -12,9 +12,10 @@ def welcome_user():
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print("Find the greatest common divisor of given numbers.")
+    return name
 
 
-def play_game():
+def play_game(name):
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -27,7 +28,10 @@ def play_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'."
+            )
             print("Let's try again!")
             return
     print(f"Congratulations, {name}!")
@@ -35,8 +39,8 @@ def play_game():
 
 def main():
     print("Welcome to the Brain Games!")
-    welcome_user()
-    play_game()
+    name = welcome_user()
+    play_game(name)
 
 
 if __name__ == "__main__":

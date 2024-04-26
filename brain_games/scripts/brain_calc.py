@@ -2,11 +2,7 @@ import random
 import operator
 import prompt
 
-OPERATORS = {
-    '+': operator.add,
-    '-': operator.sub,
-    '*': operator.mul
-}
+OPERATORS = {'+': operator.add, '-': operator.sub, '*': operator.mul}
 
 
 def generate_question():
@@ -41,7 +37,10 @@ def play_game():
             print("Correct!")
             correct_answers += 1
         else:
-            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'."
+            )
             print("Let's try again!")
             return
     print("Congratulations!")
