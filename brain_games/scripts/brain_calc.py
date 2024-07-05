@@ -17,8 +17,9 @@ def welcome_user():
     """Welcome the user and ask for their name."""
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
+    return name
 
-def play_game():
+def play_game(name):
     """Main game logic."""
     correct_answers_needed = 3
     correct_answers = 0
@@ -36,14 +37,14 @@ def play_game():
             )
             print("Let's try again!")
             return
-    print("Congratulations!")
+    print(f"Congratulations, {name}!")
 
 def main():
     """Main function of the game."""
     print("Welcome to the Brain Games!")
-    welcome_user()
+    name = welcome_user()
     print("What is the result of the expression?")
-    play_game()
+    play_game(name)
 
 if __name__ == "__main__":
     main()
