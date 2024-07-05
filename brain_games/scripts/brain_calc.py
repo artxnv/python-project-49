@@ -4,26 +4,19 @@ import prompt
 
 OPERATORS = {'+': operator.add, '-': operator.sub, '*': operator.mul}
 
-
 def generate_question():
     """Generate a question and its correct answer."""
     num1 = random.randint(1, 25)
     num2 = random.randint(1, 25)
     op = random.choice(list(OPERATORS.keys()))
-    question = (
-        f"What is the result of the expression? "
-        f"{num1} {op} {num2}"
-    )
+    question = f"{num1} {op} {num2}"
     correct_answer = str(OPERATORS[op](num1, num2))
     return question, correct_answer
-
 
 def welcome_user():
     """Welcome the user and ask for their name."""
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
-    print("What is the result of the expression?")
-
 
 def play_game():
     """Main game logic."""
@@ -45,13 +38,13 @@ def play_game():
             return
     print("Congratulations!")
 
-
 def main():
     """Main function of the game."""
     print("Welcome to the Brain Games!")
     welcome_user()
+    print("What is the result of the expression?")
     play_game()
-
 
 if __name__ == "__main__":
     main()
+
