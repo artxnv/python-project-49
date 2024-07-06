@@ -44,7 +44,7 @@ def play_game(name):  # Принимаем имя пользователя в к
                 f"'{user_answer}' is wrong answer ;(. "
                 f"Correct answer was '{hidden_number}'."
             )
-            print("Let's try again!")
+            print(f"Let's try again, {name}!")  # Включаем имя пользователя в сообщение
             return
     print(f"Congratulations, {name}!")
 
