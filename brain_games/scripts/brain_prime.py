@@ -9,12 +9,7 @@ def is_prime(number):
             return False
     return True
 
-def welcome_user():
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    return name
-
-def play_game(name):
+def play_game():
     correct_answers_needed = 3
     correct_answers = 0
     
@@ -33,12 +28,11 @@ def play_game(name):
             print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print("Let's try again!")
             return
-    print(f"Congratulations, {name}!")
+    print("Congratulations, you won!")
 
 def main():
-    print("Welcome to the Brain Games!") 
-    name = welcome_user() 
-    play_game(name) 
+    print("Welcome to the Brain Games!")  
+    play_game() 
 
 if __name__ == "__main__":
     main()
