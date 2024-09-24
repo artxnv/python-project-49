@@ -15,9 +15,10 @@ def welcome_user():
     return name
 
 def play_game(name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no."')  # Переместил вывод описания сюда
     correct_answers_needed = 3
     correct_answers = 0
+    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")
+    
     while correct_answers < correct_answers_needed:
         number = random.randint(1, 100)
         print("Question:", number)
@@ -28,16 +29,13 @@ def play_game(name):
             print("Correct!")
             correct_answers += 1
         else:
-            print(
-                f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'."
-            )
+            print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print("Let's try again!")
             return
     print(f"Congratulations, {name}!")
 
 def main():
-    print("Welcome to the Brain Games!")  
+    print("Welcome to the Brain Games!")
     name = welcome_user()
     play_game(name)
 
