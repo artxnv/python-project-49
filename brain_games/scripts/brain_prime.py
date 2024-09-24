@@ -15,7 +15,7 @@ def welcome_user():
     return name
 
 def play_game(name):
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")  # Переместил вывод описания сюда
+    print('Answer "yes" if given number is prime. Otherwise answer "no."')  # Переместил вывод описания сюда
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
