@@ -18,7 +18,7 @@ def play_game(name):
     correct_answers_needed = 3
     correct_answers = 0
     
-    print('Answer "yes" if given number is prime. Otherwise answer "no"')  # Move instruction here
+    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")
 
     while correct_answers < correct_answers_needed:
         number = random.randint(1, 100)
@@ -36,9 +36,9 @@ def play_game(name):
     print(f"Congratulations, {name}!")
 
 def main():
-    print("Welcome to the Brain Games!")
-    name = welcome_user()
-    play_game(name)
+    print("Welcome to the Brain Games!") 
+    name = welcome_user() 
+    play_game(name) 
 
 if __name__ == "__main__":
     main()
