@@ -18,7 +18,7 @@ def play_game(name):
     correct_answers_needed = 3
     correct_answers = 0
     
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")  # Move instruction here
+    print('Answer "yes" if given number is prime. Otherwise answer "no"')  # Move instruction here
 
     while correct_answers < correct_answers_needed:
         number = random.randint(1, 100)
