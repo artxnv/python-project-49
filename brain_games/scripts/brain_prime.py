@@ -13,11 +13,12 @@ def is_prime(number):
 
 def welcome_user():
     name = prompt.string("May I have your name? ")
+    print(f"Hello, {name}!")  # Возвращаем приветствие
     return name
 
 
 def play_game(name):
-    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")  # Перенесено сюда
+    print("Answer 'yes' if given number is prime. Otherwise answer 'no.'")  
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -40,7 +41,7 @@ def play_game(name):
 
 
 def main():
-    print("Welcome to the Brain Games!")  # Приветствие только один раз
+    print("Welcome to the Brain Games!")  
     name = welcome_user()
     play_game(name)
 
