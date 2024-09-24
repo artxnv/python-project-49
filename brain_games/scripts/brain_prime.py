@@ -3,6 +3,9 @@ import prompt
 
 
 def is_prime(number):
+    """
+    Проверяет, является ли число простым.
+    """
     if number < 2:
         return False
     for i in range(2, int(number ** 0.5) + 1):
@@ -12,13 +15,19 @@ def is_prime(number):
 
 
 def welcome_user():
+    """
+    Приветствует пользователя и объясняет правила игры.
+    """
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    return name  
+    return name
 
 
-def play_game(name):  
+def play_game(name):
+    """
+    Основная игровая логика: задаёт вопросы и проверяет ответы пользователя.
+    """
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -40,9 +49,12 @@ def play_game(name):
 
 
 def main():
+    """
+    Основная функция программы.
+    """
     print("Welcome to the Brain Games!")
     name = welcome_user()
-    play_game(name) 
+    play_game(name)
 
 
 if __name__ == "__main__":

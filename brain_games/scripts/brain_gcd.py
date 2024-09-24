@@ -3,12 +3,18 @@ import prompt
 
 
 def find_gcd(num1, num2):
+    """
+    Нахождение наибольшего общего делителя (НОД) двух чисел.
+    """
     while num2:
         num1, num2 = num2, num1 % num2
     return abs(num1)
 
 
 def welcome_user():
+    """
+    Приветствие пользователя и объяснение правил игры.
+    """
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print("Find the greatest common divisor of given numbers.")
@@ -16,6 +22,9 @@ def welcome_user():
 
 
 def play_game(name):
+    """
+    Основная логика игры с запросами и проверкой ответов.
+    """
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -38,6 +47,9 @@ def play_game(name):
 
 
 def main():
+    """
+    Основная функция программы.
+    """
     print("Welcome to the Brain Games!")
     name = welcome_user()
     play_game(name)

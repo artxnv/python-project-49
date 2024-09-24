@@ -3,10 +3,12 @@ import prompt
 
 
 def is_even(number):
+    """Check if a number is even."""
     return number % 2 == 0
 
 
 def welcome_user():
+    """Welcome the user and provide game instructions."""
     name = prompt.string("May I have your name? ")
     print(f"Hello, {name}!")
     print(
@@ -17,6 +19,7 @@ def welcome_user():
 
 
 def play_game(name):
+    """Main game loop where the user answers if a number is even."""
     correct_answers_needed = 3
     correct_answers = 0
     while correct_answers < correct_answers_needed:
@@ -38,6 +41,7 @@ def play_game(name):
 
 
 def main():
+    """Start the Brain Games."""
     print("Welcome to the Brain Games!")
     name = welcome_user()
     play_game(name)
