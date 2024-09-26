@@ -1,50 +1,13 @@
-import random
-import prompt
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
-
-def is_even(number):
-    """Check if a number is even."""
-    return number % 2 == 0
-
-
-def welcome_user():
-    """Welcome the user and provide game instructions."""
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
-    print(
-        'Answer "yes" if the number is even, '
-        'otherwise answer "no".'
-    )
-    return name
-
-
-def play_game(name):
-    """Main game loop where the user answers if a number is even."""
-    correct_answers_needed = 3
-    correct_answers = 0
-    while correct_answers < correct_answers_needed:
-        number = random.randint(1, 100)
-        print(f"Question: {number}")
-        user_answer = prompt.string("Your answer: ").lower()
-        correct_answer = 'yes' if is_even(number) else 'no'
-        if user_answer == correct_answer:
-            print("Correct!")
-            correct_answers += 1
-        else:
-            print(
-                f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'."
-            )
-            print(f"Let's try again, {name}!")
-            return
-    print(f"Congratulations, {name}!")
+from brain_games.engine import play
+from brain_games.games import brain_even
 
 
 def main():
-    """Start the Brain Games."""
-    print("Welcome to the Brain Games!")
-    name = welcome_user()
-    play_game(name)
+    """Запуск игры."""
+    play(brain_even)
 
 
 if __name__ == "__main__":
