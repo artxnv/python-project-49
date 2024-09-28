@@ -1,4 +1,4 @@
-from utils import generate_random_number
+from brain_games.utils import generate_random_number
 
 
 TASK = "What number is missing in the progression?"

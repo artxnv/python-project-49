@@ -1,4 +1,4 @@
-from utils import generate_random_number
+from brain_games.utils import generate_random_number
 
 
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
