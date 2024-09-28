@@ -1,6 +1,6 @@
 import operator
 import random
-from utils import generate_random_number
+from brain_games.utils import generate_random_number
 
 
 TASK = "What is the result of the expression?"
