@@ -1,4 +1,4 @@
-import random
+from utils import generate_random_number
 
 
 TASK = "Find the greatest common divisor of given numbers."
@@ -17,8 +17,8 @@ def generate_question():
     """
     Генерирует два числа и правильный ответ (НОД).
     """
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
+    number1 = generate_random_number(1, 100)
+    number2 = generate_random_number(1, 100)
     question = f"{number1} {number2}"
     correct_answer = str(find_gcd(number1, number2))
     return question, correct_answer
