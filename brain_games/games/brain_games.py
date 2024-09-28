@@ -1,6 +1,5 @@
-# brain_games/games/brain_games.py
-
 import prompt
+
 
 def welcome_user():
     """
