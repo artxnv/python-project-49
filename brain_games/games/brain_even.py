@@ -1,7 +1,7 @@
 from brain_games.utils import generate_random_number
 
 TASK = (
-    'Answer "yes" if the number is even, otherwise answer "no."'
+    'Answer "yes" if the number is even, otherwise answer "no".'
 )
 
 

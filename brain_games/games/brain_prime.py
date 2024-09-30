@@ -4,7 +4,7 @@ from brain_games.utils import (
 )
 
 TASK = (
-    'Answer "yes" if the number is prime. Otherwise answer "no."'
+    'Answer "yes" if the number is prime. Otherwise answer "no".'
 )
 
 
