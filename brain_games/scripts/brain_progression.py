@@ -6,7 +6,6 @@ from brain_games.games import brain_progression
 
 
 def main():
-    """Запуск игры."""
     play(brain_progression)
 
 
