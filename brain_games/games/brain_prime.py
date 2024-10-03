@@ -1,6 +1,6 @@
 import random
 
-TASK = 'Ответьте "yes", если данное число простое. Иначе ответьте "no".'
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def generate_random_number(start=1, end=100):
