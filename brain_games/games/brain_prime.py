@@ -43,6 +43,6 @@ def generate_question():
         tuple: Вопрос в виде строки и правильный ответ ("yes" или "no").
     """
     number = generate_random_number()
-    question = f"Является ли {number} простым числом?"
+    question = f"Question: {number}"
     correct_answer = "yes" if is_prime(number) else "no"
     return question, correct_answer
