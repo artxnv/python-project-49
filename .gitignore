@@ -1,3 +1,9 @@
 # Игнорировать директорию .venv
 .venv/
+__pycache__/
+dist/
+build/
+brain_games.egg-info/
+
+
 

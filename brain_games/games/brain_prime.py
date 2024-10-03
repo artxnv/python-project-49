@@ -1,19 +1,31 @@
-from brain_games.utils import (
-    generate_random_number,
-    generate_question_with_check
-)
+import random
 
-TASK = (
-    'Answer "yes" if given number is prime. Otherwise answer "no".'
-)
+TASK = 'Ответьте "yes", если данное число простое. Иначе ответьте "no".'
+
+
+def generate_random_number(start=1, end=100):
+    """
+    Генерирует случайное число в заданном диапазоне.
+
+    Args:
+        start (int): Начало диапазона (включительно).
+        end (int): Конец диапазона (включительно).
+
+    Returns:
+        int: Случайное число в заданном диапазоне.
+    """
+    return random.randint(start, end)
 
 
 def is_prime(number):
     """
     Проверяет, является ли число простым.
 
-    :param number: Число для проверки.
-    :return: True, если число простое, иначе False.
+    Args:
+        number (int): Число для проверки.
+
+    Returns:
+        bool: True, если число простое, иначе False.
     """
     if number < 2:
         return False
@@ -27,7 +39,10 @@ def generate_question():
     """
     Генерирует вопрос о простоте числа и правильный ответ.
 
-    :return: Вопрос и правильный ответ.
+    Returns:
+        tuple: Вопрос в виде строки и правильный ответ ("yes" или "no").
     """
     number = generate_random_number()
-    return generate_question_with_check(number, is_prime)
+    question = f"Является ли {number} простым числом?"
+    correct_answer = "yes" if is_prime(number) else "no"
+    return question, correct_answer
